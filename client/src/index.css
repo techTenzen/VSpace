@@ -25,45 +25,49 @@
     --ring: 262.1 52.4% 54.1%;
     --radius: 0.5rem;
   }
- 
+
   .dark {
-    /* Custom VIT Skill Space Dark Theme */
-    --background: 0 0% 7%;
+    /* Base colors */
+    --background: 220 20% 5%;
     --foreground: 0 0% 94%;
-    --card: 0 0% 18%;
+    --card: 220 20% 7%;
     --card-foreground: 0 0% 94%;
-    --popover: 0 0% 12%;
+    --popover: 220 20% 6%;
     --popover-foreground: 0 0% 94%;
-    --primary: 262.1 52.4% 54.1%;
-    --primary-foreground: 0 0% 94%;
-    --secondary: 0 0% 12%;
+
+    /* Winster Hub blue */
+    --primary: 218 100% 66%; /* #3772FF */
+    --primary-foreground: 0 0% 100%;
+
+    /* Supporting colors */
+    --secondary: 220 18% 12%;
     --secondary-foreground: 0 0% 94%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 274 27% 38%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 218 10% 70%; /* #a0aec0 */
+    --accent: 218 100% 66%;
     --accent-foreground: 0 0% 94%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 94%;
-    --border: 240 3.7% 16%;
-    --input: 0 0% 15%;
-    --ring: 262.1 52.4% 54.1%;
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
+    --ring: 218.100% 66%;
 
-    /* Chart colors */
-    --chart-1: 262.1 52.4% 54.1%;
-    --chart-2: 128 34% 57%;
-    --chart-3: 35 92% 58%;
+    /* Chart colors (matching Winster Hub) */
+    --chart-1: 218 100% 66%; /* WIN blue */
+    --chart-2: 27 87% 54%;   /* BTC orange */
+    --chart-3: 174 44% 41%;  /* USDT green */
     --chart-4: 198 86% 50%;
     --chart-5: 323 85% 55%;
 
-    /* Sidebar colors */
-    --sidebar-background: 0 0% 11%;
-    --sidebar-foreground: 0 0% 94%;
-    --sidebar-primary: 262.1 52.4% 54.1%;
-    --sidebar-primary-foreground: 0 0% 94%;
-    --sidebar-accent: 274 27% 38%;
-    --sidebar-accent-foreground: 0 0% 94%;
-    --sidebar-border: 240 3.7% 16%;
-    --sidebar-ring: 262.1 52.4% 54.1%;
+    /* Sidebar - Winster Hub exact colors */
+    --sidebar-from: 222 31% 11%;     /* #111827 - top of gradient */
+    --sidebar-to: 217 43% 7%;        /* #0c111a - bottom of gradient */
+    --sidebar-foreground: 218 10% 70%; /* #a0aec0 */
+    --sidebar-primary: 218 100% 66%;   /* #3772ff */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-active-from: 218 100% 13%; /* Active nav gradient start */
+    --sidebar-active-to: 218 90% 5%;     /* Active nav gradient end */
+    --sidebar-border: 220 20% 12%;
   }
 
   * {
@@ -79,16 +83,69 @@
     width: 6px;
     height: 6px;
   }
-  
+
   ::-webkit-scrollbar-track {
     @apply bg-secondary;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     @apply bg-accent rounded-sm;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary;
+  }
+}
+
+/* Winster Hub specific components */
+@layer components {
+  /* Sidebar with the exact gradient */
+  .winster-sidebar {
+    @apply flex flex-col w-64 shrink-0 h-screen;
+    background: linear-gradient(180deg, #111827 0%, #0c111a 100%);
+    color: #a0aec0;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Active navigation item with the exact gradient */
+  .winster-nav-active {
+    background: linear-gradient(90deg, rgba(55, 114, 255, 0.2) 0%, rgba(55, 114, 255, 0.05) 100%);
+    color: #ffffff;
+  }
+
+  /* Navigation item hover state */
+  .winster-nav-item {
+    @apply flex items-center h-10 px-3 py-2 text-sm rounded-md transition-colors;
+    color: #a0aec0;
+  }
+
+  .winster-nav-item:hover:not(.winster-nav-active) {
+    background: rgba(55, 114, 255, 0.05);
+    color: #d1d8e0;
+  }
+
+  /* Blue card background for profile/logo areas */
+  .winster-card-blue {
+    background: linear-gradient(90deg, rgba(55, 114, 255, 0.15) 0%, rgba(55, 114, 255, 0.05) 100%);
+    @apply rounded-lg p-4;
+  }
+
+  /* Search input styling */
+  .winster-search {
+    @apply w-full py-2 pl-10 pr-4 rounded-xl text-sm;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #a0aec0;
+  }
+
+  .winster-search:focus {
+    @apply outline-none;
+    border: 1px solid rgba(55, 114, 255, 0.5);
+  }
+
+  /* Avatar styling */
+  .winster-avatar-fallback {
+    background: linear-gradient(135deg, #3772ff 0%, #2952cc 100%);
+    color: white;
   }
 }

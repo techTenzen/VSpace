@@ -180,7 +180,7 @@ export default function CGPAPage() {
                     <Line 
                       type="monotone" 
                       dataKey="GPA" 
-                      stroke="#7E57C2" 
+                      stroke="bg-primary" 
                       strokeWidth={2}
                       activeDot={{ r: 8 }} 
                     />

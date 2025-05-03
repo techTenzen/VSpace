@@ -43,7 +43,14 @@ export default function SkillsPage() {
     return Object.entries(categories).map(([name, value]) => ({ name, value }));
   };
 
-  const COLORS = ['#7E57C2', '#4CAF50', '#FF9800', '#F44336', '#2196F3'];
+// Dark-only theme colors from tailwind.config.js
+  const COLORS = [
+    "#FF6F61", // orange.DEFAULT
+    "#FF9478", // orange.light
+    "#FFD166", // yellow.DEFAULT
+    "#E1B000", // yellow.dark
+    "#FFFFFF", // text-main
+  ];
 
   const filteredSkills = skills
     .filter((skill) => filterCategory === "all" || skill.category === filterCategory)

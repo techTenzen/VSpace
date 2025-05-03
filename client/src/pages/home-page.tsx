@@ -67,9 +67,9 @@ export default function HomePage() {
           </div>
           <div className="flex items-center mt-12">
             <div className="flex -space-x-2">
-              <div className="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white">S</div>
-              <div className="w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white">A</div>
-              <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-white">R</div>
+              <div className="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-foreground">S</div>
+              <div className="w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-foreground">A</div>
+              <div className="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-foreground">R</div>
             </div>
             <p className="ml-4 text-muted-foreground">Join 1,200+ students already using the platform</p>
           </div>

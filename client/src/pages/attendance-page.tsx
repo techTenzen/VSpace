@@ -58,7 +58,7 @@ export default function AttendancePage() {
     };
   });
 
-  const COLORS = ['#7E57C2', '#4CAF50', '#FF9800', '#F44336', '#2196F3', '#673AB7', '#009688'];
+  const COLORS = ['bg-primary', '#4CAF50', 'bg-accent', 'bg-destructive', '#2196F3', '#673AB7', '#009688'];
 
   const handleAddSubject = () => {
     setSelectedSubject(undefined);
@@ -131,8 +131,8 @@ export default function AttendancePage() {
                       borderColor: overallAttendance >= 85 
                         ? '#4CAF50' 
                         : overallAttendance >= 75 
-                          ? '#FF9800' 
-                          : '#F44336' 
+                          ? 'bg-accent' 
+                          : 'bg-destructive' 
                     }}
                   >
                     {overallAttendance}%

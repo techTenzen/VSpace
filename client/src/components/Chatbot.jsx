@@ -1,123 +1,152 @@
-'use client';
 import { useState, useRef, useEffect } from 'react';
 
-export default function Chatbot() {
+export default function ChatboxPage() {
     const [messages, setMessages] = useState([]);
-    const [inputMessage, setInputMessage] = useState('');
+    const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef(null);
 
-    // Scroll to bottom of messages
-    const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
-
     useEffect(() => {
-        scrollToBottom();
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!inputMessage.trim()) return;
+        if (!input.trim()) return;
 
-        // Add user message
-        const userMessage = { content: inputMessage, sender: 'user' };
+        const userMessage = {
+            content: input,
+            sender: 'user',
+            timestamp: new Date()
+        };
+
         setMessages(prev => [...prev, userMessage]);
         setIsLoading(true);
-        setInputMessage('');
+        setInput('');
 
         try {
-            // API call to your Flask backend
             const response = await fetch('http://localhost:5000/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ message: inputMessage }),
+                body: JSON.stringify({ message: userMessage.content }),
             });
 
+            if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
 
-            // Add bot response
-            setMessages(prev => [...prev, {
+            const botMessage = {
                 content: data.response,
-                sender: 'bot'
-            }]);
+                sender: 'bot',
+                timestamp: new Date()
+            };
+
+            setMessages(prev => [...prev, botMessage]);
         } catch (error) {
-            console.error('Error fetching from chatbot API:', error);
             setMessages(prev => [...prev, {
                 content: 'Sorry, I experienced a technical issue. Please try again.',
-                sender: 'bot'
+                sender: 'bot',
+                timestamp: new Date()
             }]);
         } finally {
             setIsLoading(false);
         }
     };
 
+    const formatTime = (date) => {
+        return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    };
+
     return (
-        <div className="w-full max-w-md h-[500px] bg-white rounded-lg shadow-lg flex flex-col">
-            <div className="bg-primary p-3 rounded-t-lg">
-                <h2 className="text-white font-semibold">VIT-AP Assistant</h2>
-            </div>
+        <div
+            className="flex-1 flex flex-col items-center justify-center min-h-screen bg-background"
+            style={{
+                backgroundImage: "url('your-image-path.jpg')", // Replace with your image path
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+            }}
+        >
+            <div className="w-full max-w-2xl bg-card/90 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[36rem] backdrop-blur-md border border-border">
+                {/* Chat header */}
+                <div className="bg-primary p-4 text-primary-foreground border-b border-border">
+                    <h1 className="text-xl font-bold">VIT-AP Assistant</h1>
+                    <p className="text-sm opacity-80">Ask me about faculty or fee information</p>
+                </div>
 
-            <div className="flex-1 p-4 overflow-y-auto">
-                {messages.length === 0 ? (
-                    <div className="text-center text-gray-400 my-4">
-                        Ask me anything about VIT-AP faculty or fees!
-                    </div>
-                ) : (
-                    messages.map((msg, index) => (
-                        <div
-                            key={index}
-                            className={`mb-4 ${
-                                msg.sender === 'user' ? 'text-right' : 'text-left'
-                            }`}
-                        >
+                {/* Chat messages container */}
+                <div className="flex-1 p-4 overflow-y-auto bg-background/70">
+                    {messages.length === 0 ? (
+                        <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
+                            <div className="mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M8 15h8M9 9h.01M15 9h.01"></path>
+                                </svg>
+                            </div>
+                            <p className="text-center">Hello! I'm your VIT-AP Assistant. Ask me anything about faculty or college fees.</p>
+                        </div>
+                    ) : (
+                        messages.map((msg, index) => (
                             <div
-                                className={`inline-block p-3 rounded-lg max-w-[80%] ${
-                                    msg.sender === 'user'
-                                        ? 'bg-primary/10 text-primary-foreground'
-                                        : 'bg-muted'
-                                }`}
+                                key={index}
+                                className={`mb-4 flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                             >
-                                {msg.content}
+                                <div
+                                    className={`max-w-[80%] rounded-lg p-3 ${
+                                        msg.sender === 'user'
+                                            ? 'bg-primary text-primary-foreground rounded-tr-none'
+                                            : 'bg-muted text-muted-foreground rounded-tl-none'
+                                    }`}
+                                >
+                                    <div className="mb-1">{msg.content}</div>
+                                    <div
+                                        className={`text-xs ${
+                                            msg.sender === 'user' ? 'text-primary-foreground/70' : 'text-muted-foreground/70'
+                                        }`}
+                                    >
+                                        {formatTime(msg.timestamp)}
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    )}
+
+                    {isLoading && (
+                        <div className="flex justify-start mb-4">
+                            <div className="bg-muted rounded-lg p-3 rounded-tl-none text-muted-foreground">
+                                <div className="flex items-center gap-1">
+                                    <div className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                                    <div className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                                    <div className="w-2 h-2 rounded-full bg-muted-foreground/50 animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                                </div>
                             </div>
                         </div>
-                    ))
-                )}
+                    )}
 
-                {isLoading && (
-                    <div className="text-left mb-4">
-                        <div className="inline-block p-3 rounded-lg bg-muted">
-                            <div className="flex gap-2 items-center">
-                                <div className="w-2 h-2 bg-primary/60 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                                <div className="w-2 h-2 bg-primary/60 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                                <div className="w-2 h-2 bg-primary/60 rounded-full animate-bounce"></div>
-                            </div>
-                        </div>
-                    </div>
-                )}
+                    <div ref={messagesEndRef} />
+                </div>
 
-                <div ref={messagesEndRef} />
+                {/* Input form */}
+                <form onSubmit={handleSubmit} className="p-3 border-t border-border flex bg-card/80">
+                    <input
+                        type="text"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        placeholder="Ask about faculty or fees..."
+                        className="flex-1 rounded-l-lg border border-input p-2 bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                        disabled={isLoading}
+                    />
+                    <button
+                        type="submit"
+                        disabled={isLoading || !input.trim()}
+                        className="bg-primary text-primary-foreground px-4 py-2 rounded-r-lg hover:bg-primary/90 disabled:opacity-50"
+                    >
+                        Send
+                    </button>
+                </form>
             </div>
-
-            <form onSubmit={handleSubmit} className="p-2 border-t flex">
-                <input
-                    type="text"
-                    value={inputMessage}
-                    onChange={(e) => setInputMessage(e.target.value)}
-                    placeholder="Ask about faculty or fees..."
-                    className="flex-1 p-2 border rounded-l-md focus:outline-none focus:ring-1 focus:ring-primary"
-                    disabled={isLoading}
-                />
-                <button
-                    type="submit"
-                    disabled={isLoading || !inputMessage.trim()}
-                    className="bg-primary text-white px-4 py-2 rounded-r-md disabled:bg-primary/50"
-                >
-                    Send
-                </button>
-            </form>
         </div>
     );
 }
