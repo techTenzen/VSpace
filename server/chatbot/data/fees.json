@@ -1,0 +1,194 @@
+{
+  "programs": [
+    {
+      "name": "B.Tech",
+      "categories": [
+        {
+          "category": "1",
+          "group_A": {
+            "total_fee": 176000,
+            "advance_fee": 150000,
+            "balance_fee": 26000
+          },
+          "group_B": {
+            "total_fee": 198000,
+            "advance_fee": 198000,
+            "balance_fee": 0
+          }
+        },
+        {
+          "category": "2",
+          "group_A": {
+            "total_fee": 235000,
+            "advance_fee": 150000,
+            "balance_fee": 85000
+          },
+          "group_B": {
+            "total_fee": 307000,
+            "advance_fee": 200000,
+            "balance_fee": 107000
+          }
+        },
+        {
+          "category": "3",
+          "group_A": {
+            "total_fee": 343000,
+            "advance_fee": 200000,
+            "balance_fee": 143000
+          },
+          "group_B": {
+            "total_fee": 405000,
+            "advance_fee": 250000,
+            "balance_fee": 155000
+          }
+        },
+        {
+          "category": "4",
+          "group_A": {
+            "total_fee": 368000,
+            "advance_fee": 200000,
+            "balance_fee": 168000
+          },
+          "group_B": {
+            "total_fee": 448000,
+            "advance_fee": 300000,
+            "balance_fee": 148000
+          }
+        },
+        {
+          "category": "5",
+          "group_A": {
+            "total_fee": 398000,
+            "advance_fee": 250000,
+            "balance_fee": 148000
+          },
+          "group_B": {
+            "total_fee": 493000,
+            "advance_fee": 300000,
+            "balance_fee": 193000
+          }
+        }
+      ]
+    },
+    {
+      "name": "Integrated M.Tech CSE (Virtusa)",
+      "categories": [
+        { "category": "1", "tuition_fees": 120000, "caution_fees": 3000 },
+        { "category": "2", "tuition_fees": 190000, "caution_fees": 3000 },
+        { "category": "3", "tuition_fees": 230000, "caution_fees": 3000 },
+        { "category": "4", "tuition_fees": 275000, "caution_fees": 3000 },
+        { "category": "5", "tuition_fees": 295000, "caution_fees": 3000 }
+      ]
+    },
+    {
+      "name": "Integrated M.Tech Software Engineering",
+      "categories": [
+        { "category": "1", "tuition_fees": 120000, "caution_fees": 2000 },
+        { "category": "2", "tuition_fees": 190000, "caution_fees": 2000 },
+        { "category": "3", "tuition_fees": 230000, "caution_fees": 2000 },
+        { "category": "4", "tuition_fees": 275000, "caution_fees": 2000 },
+        { "category": "5", "tuition_fees": 295000, "caution_fees": 2000 }
+      ]
+    },
+    {
+      "name": "M.Tech VLSI Design",
+      "categories": [
+        {
+          "category": "1",
+          "tuition_fees": 190000,
+          "caution_fees": 3000,
+          "total_fees": 193000
+        },
+        {
+          "category": "2",
+          "tuition_fees": 299000,
+          "caution_fees": 3000,
+          "total_fees": 302000
+        }
+      ]
+    },
+    {
+      "name": "M.Sc Data Science",
+      "categories": [
+        {
+          "category": "1",
+          "tuition_fees": 80000,
+          "caution_fees": 3000,
+          "total_fees": 83000
+        },
+        {
+          "category": "2",
+          "tuition_fees": 98000,
+          "caution_fees": 3000,
+          "total_fees": 101000
+        }
+      ]
+    },
+    {
+      "name": "Dual Degree B.Sc-M.Sc. Data Science (Binghamton University, QpiAI)",
+      "tuition_fees": 55000,
+      "caution_fees": 3000,
+      "total_fees": 58000
+    },
+    {
+      "name": "M.Sc Physics (NoPo Technologies)",
+      "tuition_fees": 60000,
+      "caution_fees": 3000,
+      "total_fees": 63000
+    },
+    {
+      "name": "M.Sc Chemistry (MKCI)",
+      "tuition_fees": 60000,
+      "caution_fees": 3000,
+      "total_fees": 63000
+    },
+    {
+      "name": "BBA",
+      "categories": [
+        {
+          "category": "1",
+          "tuition_fees": 80000,
+          "caution_fees": 3000,
+          "total_fees": 83000
+        },
+        {
+          "category": "2",
+          "tuition_fees": 100000,
+          "caution_fees": 3000,
+          "total_fees": 103000
+        },
+        {
+          "category": "3",
+          "tuition_fees": 125000,
+          "caution_fees": 3000,
+          "total_fees": 128000
+        }
+      ]
+    },
+    {
+      "name": "BA LL.B/ BBA LL.B (Hons.) (5 years Integrated Programme)",
+      "tuition_fees": 162000,
+      "caution_fees": 3000,
+      "total_fees": 164000
+    },
+    {
+      "name": "B.Com (Finance)",
+      "tuition_fees": 55000,
+      "caution_fees": 3000,
+      "total_fees": 58000
+    },
+    {
+      "name": "Dual Degree BA-MA",
+      "tuition_fees": 55000,
+      "caution_fees": 3000,
+      "total_fees": 58000
+    },
+    {
+      "name": "Ph.D Fee Structure (Per Annum)",
+      "tuition_fees": 40000,
+      "caution_fees": 3000,
+      "total_fees": 43000,
+      "thesis_fees": 10000
+    }
+  ]
+}

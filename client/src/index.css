@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 262.1 52.4% 54.1%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262.1 52.4% 54.1%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    /* Custom VIT Skill Space Dark Theme */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 94%;
+    --card: 0 0% 18%;
+    --card-foreground: 0 0% 94%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 94%;
+    --primary: 262.1 52.4% 54.1%;
+    --primary-foreground: 0 0% 94%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 94%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 274 27% 38%;
+    --accent-foreground: 0 0% 94%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 94%;
+    --border: 240 3.7% 16%;
+    --input: 0 0% 15%;
+    --ring: 262.1 52.4% 54.1%;
+
+    /* Chart colors */
+    --chart-1: 262.1 52.4% 54.1%;
+    --chart-2: 128 34% 57%;
+    --chart-3: 35 92% 58%;
+    --chart-4: 198 86% 50%;
+    --chart-5: 323 85% 55%;
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 11%;
+    --sidebar-foreground: 0 0% 94%;
+    --sidebar-primary: 262.1 52.4% 54.1%;
+    --sidebar-primary-foreground: 0 0% 94%;
+    --sidebar-accent: 274 27% 38%;
+    --sidebar-accent-foreground: 0 0% 94%;
+    --sidebar-border: 240 3.7% 16%;
+    --sidebar-ring: 262.1 52.4% 54.1%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* Custom scrollbar for the modern look */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent rounded-sm;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+}

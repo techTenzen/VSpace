@@ -1,0 +1,161 @@
+Implement VIT Skill Space, a comprehensive self-growth toolkit web application for VIT-AP students with the following detailed specifications:
+
+🔧 Technical Stack
+Frontend: React.js with TailwindCSS and ShadCN UI components
+
+Backend: Node.js / Express.js
+
+Database: PostgreSQL via NeonDB using Prisma ORM
+
+Authentication: Custom JWT-based authentication system
+
+Optional Animations: Framer Motion for smooth transitions
+
+🎨 Design System
+Modern Dark UI with the following exact color palette:
+
+Primary Background: #121212 (Deep Slate)
+
+Secondary Background: #1E1E1E (Dark Charcoal)
+
+Card Surfaces: #2D2D2D (Rich Black)
+
+Accents: #5D4A77 (Midnight Purple)
+
+Primary Buttons: #7E57C2 (Violet)
+
+Text/Highlights: #F0F0F0 (Soft White)
+
+👣 User Journey & Feature Details
+1. Initial Authentication & Onboarding
+Landing Page:
+
+Brief intro about VIT Skill Space
+
+Clear Sign-up/Login buttons
+
+Visuals representing student growth
+
+Sign-Up Process:
+
+Form: Email, Password (with strength indicator), TOS acceptance
+
+Post-Signup Onboarding (Multi-Step Modal):
+
+Step 1: Personal Info
+Full name, Branch/Department (dropdown), Year of joining
+
+Step 2: Academic Info
+Roll number, Gender (dropdown), Phone number
+
+Step 3: Skills Assessment
+Add 3-5 skills using sliders (1–5), skip option
+
+Redirect to dashboard with welcome message
+
+Login:
+
+Email & Password, “Remember Me”, Forgot Password
+
+Redirect to dashboard or onboarding if incomplete
+
+2. Dashboard
+After login:
+
+Welcome message with user’s name
+
+Overview cards for all features
+
+Quick-access feature buttons
+
+Recent activity summary
+
+3. Profile Management
+Accessed via nav user icon
+
+View/edit all profile data
+
+Profile picture upload
+
+Profile completion % indicator
+
+4. Skill Tracker
+Grid-based card UI
+
+Add Skill modal:
+Name, Category (dropdown), Proficiency (1-5), Optional notes
+
+Each skill card displays:
+Name, Category, Proficiency meter (stars/progress), Edit/Delete
+
+Filter/sort by category or proficiency
+
+Pie chart for skill distribution by category
+
+5. Attendance Tracker
+Table view of all subjects
+
+Add Subject modal:
+Name, Starting total & attended classes
+
+Each subject row:
+Name, Attended/Total, % Attendance, Status indicator
+
+Quick buttons: Attended / Missed
+
+Edit/delete each subject
+
+Summary card for overall attendance
+
+Warning indicator < 75%
+
+Archive subjects from past semesters
+
+6. CGPA & GPA Calculator
+Accordion layout with semester sections
+
+Add Semester button
+
+Each section allows adding subjects via modal:
+Name, Credits (1–4), Grade (S–F)
+
+GPA auto-calculated per semester
+
+Summary card with cumulative CGPA, total credits
+
+GPA trend graph (line chart)
+
+Option to simulate future performance
+
+7. Idea Wall
+Masonry grid of idea cards
+
+Each card:
+Title, Short description, Author, “Talk” button
+
+Share Idea modal:
+Title, Description (limited), Live preview
+
+“Talk” button opens default email client or pre-filled email modal:
+
+vbnet
+Copy
+Edit
+Subject: Collaboration on [Idea Title]
+Body: Hi [Author Name], I'm [User Name] from VIT-AP. I’m interested in collaborating on your idea about [Idea Title]. Please contact me at [email/phone].
+Sort options: Newest, Oldest
+
+No likes/comments—minimal & purposeful
+
+8. Learning Tab: Core Subjects Flashcards
+Deck selector (horizontal scroll or dropdown): Java, SQL, OOPs, DBMS, HR
+
+Each deck has 10 flashcards
+
+Click to reveal answer (Framer Motion optional)
+
+Styled with ShadCN UI and Tailwind
+
+Keyboard and screen reader accessible
+
+Easily extensible for more subjects

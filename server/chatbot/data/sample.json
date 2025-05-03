@@ -1,0 +1,2708 @@
+{
+  "faculties": [
+    {
+      "name": "Dr. Aastha Madonna Sathe",
+      "department": "SAS(Department of Mathematics)",
+      "subjects": "-",
+      "cabin_number": "CB 326.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Alisha Pradhan",
+      "department": "VIT-AP School of Law",
+      "subjects": "-",
+      "cabin_number": "AB-2 414.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ankita Swetaparna",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "AB-2 325.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arindam Dey",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB G07.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arpana Venu",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "CB 103.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arun Kumar Gopu",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 207",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Atul Shankar Mani Tripathi",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 103.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Avadhesh Kumar",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. B Vasavi",
+      "department": "SMEC",
+      "subjects": "-",
+      "cabin_number": "AB-1 160",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Bibhab Bandhu Majumdar",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB 205.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Bolem Sai Chandana",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB G04.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. C Siva Kumar Reddy",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "CB G05.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Chandan Nayak",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "AB-1 425.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Chandini Stephens",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "AB-2 202.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Chirra Venkata Ramireddy",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.M",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. D Khasim Vali",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-2 424.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Davala Ravi Kumar",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.K",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Debakanta Tripathy",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB G05.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Devarati Roy Chowdhury",
+      "department": "Department of Social Sciences ",
+      "subjects": "-",
+      "cabin_number": "CB G04.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Dripta De Joarder",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB G07.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Eswaraiah Rayachoti",
+      "department": "School of Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 127",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Faizan Danish",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "AB-2 320.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Francis P",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.K",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ganesh Kotagiri",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "CB 205.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ilakkiya L",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "CB 103.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. K Senthil",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 115.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. K Venkateswarlu",
+      "department": "SMEC",
+      "subjects": "-",
+      "cabin_number": "CB 326.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Kankanala Srinivas",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 326.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Khasim Syed",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 164",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Kingshuk Sarkar",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-2 325.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Kotnana Ganesh",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "CB G05.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. M Venkata Rajanikanth",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "CB G05.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Mahi S Tharavathu",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "CB G07.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. N Rajashekar",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nabajyoti Deka",
+      "department": "VSB",
+      "subjects": "-",
+      "cabin_number": "AB-1 425.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nagarjuna Neella",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nagendra panini Challa",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 425.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nallamuthu S",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "CB 103.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Naveen Kumar Cherupelly",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "CB 115.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nilanjana Ghosal",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Prabhakaran Thandapani",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "CB G07.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Pradosh Ranjan Sahoo",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 103.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Praveen Maurya",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 128.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rajarshi Sarkar",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB 326.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rajesh Duvvuru",
+      "department": "School of Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 313.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rajneesh Mishra",
+      "department": "Social Sciences",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ritambhara Sharma",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB G04.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. S Priyanka",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 103.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. S Sudheer Mangalampalli",
+      "department": "School of Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB G05.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sachi Nandan Mohanty",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 205.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sagar Dhanraj Pandey",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 229.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Saladi Saritha",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 326.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sanjit Chakraborty",
+      "department": "Social Sciences",
+      "subjects": "-",
+      "cabin_number": "CB 326.L",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Selva Kumar S",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 115.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Shubhra Ghoshal",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "CB G04.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Siddique Ibrahim Peer Mohamed",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 115.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sudharshan Vadnala",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 326.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sujith Kumar Das",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 165",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Surendra Reddy Vinta",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 229.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Suresh Jagannadham",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-1 107",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Suyog Jhavar",
+      "department": "School of Mechanical Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 313.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. V Balasingh",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "CB G07.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. V V Sreenivasu M",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Vivek Kumar Srivastav",
+      "department": "SAS(Department of Mathematics)",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.M",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. A Manimaran",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 201.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. A Ramesh",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 327.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Abhijit Adhikari",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 310.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Aby Abraham",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "CB 201.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Afzal Hussain Shahid",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 111",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Agam Das Goswami",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ajay Dagar",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 116.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. AjitH Jubilson E",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 164",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Amar Wayal",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "CB 201.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ambuj Sharma",
+      "department": "Mechanical Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ameet Chavan",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 206",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anamika Lata",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 227.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anil Carie",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 157",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anil Negi",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 320.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anil Vithalrao Turukmane",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 229.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anita Sagadevan Ethiraj",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.L",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ankur",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.M",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ann Mary George",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "CB 201.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anoop Kumar Mishra",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anubendu Adhikary",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anupama A P",
+      "department": "VIT-AP School of Social Sciences and Humanities",
+      "subjects": "-",
+      "cabin_number": "CB 203.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Anupama Namburu",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Aravapalli Rama Satish",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arenkala Kichu",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arikumar K S",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arun Kumar Sinha",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arun Kumar Yadav",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 204.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arunkumar Sivakumar",
+      "department": "VIT-AP School of Business",
+      "subjects": "-",
+      "cabin_number": "CB 201.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Asraar Ahmed K A",
+      "department": "VSB",
+      "subjects": "-",
+      "cabin_number": "CB 128.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Aswathy R K",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 224.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Azees Maria John Francis",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 204.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Arunkumar",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Bappadittya Roy",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 313.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Benarji Chakka",
+      "department": "VIT-AP School of Law",
+      "subjects": "-",
+      "cabin_number": "AB-2 416.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Bharathi V C",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-2 329.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Chalasani Rajesh",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Chandan Kumar Pandey",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 320.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Chandan Kumar Thakur",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 320.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Chandu DS",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 151",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Chillu Naresh",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.N",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. D Sumathi",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 G36",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Dasari Venkata Lakshmi",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.j",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Debajit Goswami",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.M",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Debanjali Sarkar",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB G04.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Deepak Ch",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 229.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Deepak Kumar Panda",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 326.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Deepasikha Mishra",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 170",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Deepjoy Katuwal",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 202.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Dilipkumar Mohanty",
+      "department": "Mechanical Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 147",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Divya Meena Sundaram",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 224.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Dr.Abdul Kayom Md Khairuzzaman",
+      "department": "Department of Electronics Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 204.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Dr.Ashish Gupta",
+      "department": "Department of Electronics Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 204.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Dr.Neeraj Kumar Mishra",
+      "department": "Department of Electronics Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 204.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. G.Deepthi",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 327.L",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. G.Suresh",
+      "department": "VSB",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. G.Muneeswari",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 205.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Gaddam Sharat",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 325.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ganesh Reddy Karri",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 221",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. GopiKrishnan S",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 126",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Gurumurthy Komanapalli",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 202.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Hari Kishan Kondaveeti",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 326.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Hari Seetha",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 222",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Hemant Kumar Reddy",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 163",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Hemant Kumar Gianey",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 425.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Hussain Ahmed Choudhury",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Hussain Syed",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 167",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Illa Ramakanth",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB 204.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Jagadish Chandra Mudiganti",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "CB G06",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Jaiverdhan",
+      "department": "Department of Electronics  Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 204.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Jayendra Kumar",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 422.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. John Pradeep D",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 159",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Jonnadula Hari kiran",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 166",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Joseph Alugala",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "CB 327.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. K N V P S Rajesh",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.N",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. K Panduranga",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 227.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Kamalesh Kumar",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 128.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Kankan Das",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "CB 116.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Karishma Bisht",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "CB 124.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Karthika Natarajan",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 105",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Khadheer Pasha SK",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-1 125",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Khairnar Vikas Vishnu",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Kiran Kumar Patra",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Kollapuri Mohan",
+      "department": "VIT-AP School of Business",
+      "subjects": "-",
+      "cabin_number": "AB-1 425.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Komandla Mahipal Reddy",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Koteswararao Ch",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 148",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Kumar Debasis",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 320.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Lakhan Dev Sharma",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 154",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Lakshmi Sowjanya Pali",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Lalitha Kumari P",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Lisna PC",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.L",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. M Priyadharshini",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. M Krishnasamy",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. M Mahesh",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 327.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Madhusmita Mohanty",
+      "department": "VSB",
+      "subjects": "-",
+      "cabin_number": "AB-1 425.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Madhusudhana Rao N",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-1 140",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manas Kumar Pal",
+      "department": "Mechanical Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 146",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Mangalraj",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manikanta Ravindra Kumar Vakkalagadda",
+      "department": "Mechanical Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 145",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manish Kumar Singh",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 227.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manisha Maity",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manmadha Rao Banki",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-1 422.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manoj Gupta",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 G36",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manoj Kumar Gupta",
+      "department": "Mechanical Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manoj Kumar Mishra",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Manomitha Chakraborthy",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 224.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Mehfooza Munavar Basha",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Mohan Bansal",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Mohd Abdul Muqeet Maaz",
+      "department": "VSB",
+      "subjects": "-",
+      "cabin_number": "AB-1 163",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Monali Bordoloi",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 224.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Moru Satyanarayana",
+      "department": "SAS.CHY",
+      "subjects": "-",
+      "cabin_number": "CB 229.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Mukkoti Maruthi Venakata Chalapathi",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 310.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Muniyandi Muneeswaran",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 128.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Murthy V R K",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-1 130",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Muthu Krishnammal",
+      "department": "Department of Electronics and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 201.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nadiminti Nagamani",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 325.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Naga Jagadesh Bommagani",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 201.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Naga Prasad Puvvada",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "AB-1 G07.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nagaraju Devarakonda",
+      "department": "computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nandam Ashok",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nandha Kumar R",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Narendra Nath Dutta",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 128.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Neha Gupta",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nikunja Bihari Barik",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nileshchandra Kalbarao Pikle",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 310.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nirmal Chandra Roy",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB G04.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nitesh Asaramji Funde",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nusrat Begum",
+      "department": "Department of English",
+      "subjects": "-",
+      "cabin_number": "CB 201.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Nuthakki Venkata Rajasekhar",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. P Kuppusamy",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Pankaj Balkrishna Tambe",
+      "department": "Mechanical Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 310.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Paramasivam R",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Parbati Sahoo",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 203.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Pavan Kumar Y V",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 155",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Peeyush Singh",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Perumandla Karunakar",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 203.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Phani Kumar M",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Piu Kundu",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 205.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Prabha Selvaraj",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 326.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Pradeep Reddy CH",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 214",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Pragya Sengupta",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Prashanth Maroju",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-1 152",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Prashanth Rajam",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 201.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Prateek Jain",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Pratheep Kumar",
+      "department": "Deaprtment of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB 116.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Pratik Premadarshi Ray",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Praveen Kumar",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 202.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Priyanka Ghosh",
+      "department": "Social Sciences",
+      "subjects": "-",
+      "cabin_number": "AB-1 108",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Purnachand Nalluri",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 128",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. R Sinuvasan",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.N",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Radha Mohan Pattanayak",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 227.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rafael Ganzalez Macho",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Raghavendra",
+      "department": "VIT-AP School of Business",
+      "subjects": "-",
+      "cabin_number": "AB-1 410.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Raghavi R K",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 325.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rajeev Sharma",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rajmohan R",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 128.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rakhi N K",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.N",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rama Sreekanth P S",
+      "department": "Mehanical Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 148",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ranjan Kumar",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rasheda Parveen",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ravi Sankar Barpanda",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ravi Sankar Sangam",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 169",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Ravindra Dhuli",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 313.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Reeja S R",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 132",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Renuprasad Hemkiran Patki",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 325.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rohit Kumar",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 116.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rohit Kumar Das",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 224.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Rohit Lorenzo",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 158",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Roopas Kiran Sirugudu",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. S Dasaradha Ramarao",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 326.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. S V Kota Reddy",
+      "department": "Mechanical Engineering",
+      "subjects": "-",
+      "cabin_number": "CB G21",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sabeel M Basheer",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sachil Sharma",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB 201.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Salini Rosaline Tharayil",
+      "department": "VIT-AP School of Business",
+      "subjects": "-",
+      "cabin_number": "AB-1 410",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sambhudutta Nanda",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 327.K",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sameeulla Khan Md",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Samineni PeddaKrishna",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 422.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sandhya Sadanandan",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 115.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sandipan Maiti",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sanket Mishra",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Santanu Mandal",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Santosh Kumar Sahu",
+      "department": "SMECH",
+      "subjects": "-",
+      "cabin_number": "AB-1 310.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Saroj Kumar Panigraphy",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Satyanarayana Badeti",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sayyed Faizan Ali",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "AB-1 422.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Selvakumar Karuthapandi",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Senthil Murugan",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 144",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Shah Parth Mukeshbhai",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Shaik Kareemulla",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 328.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Shalini",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.L",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Shanmugasundaram",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 G36",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sheela jayachandran",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sibi Chakkaravarthy S",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 222",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sivarama Krishna Pillutla",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 128.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Snehal Bankatrao Shinde",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 224.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Somya Ranjan Sahoo",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Soubhagya Sankar Barpanda",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 171",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Soumen Kundu",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 205.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Soumyakanta Prusty",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Srinivas S",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 320.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Srinivasa Rao B",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 143",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Srinivasa Reddy Konda",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 326.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Subhasish Mahapatra",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 202.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Subrata Tikadar",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 224.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sucharitha Jackson",
+      "department": "Department of Electronics Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 116.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sudagar J",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "AB-1 153",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sudesh Manger",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sudha Ellison Mathe",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 422.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sudha S V",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 326.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sudhakar Ilango S",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sudhakar M",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sudhakar Pandey",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "AB-2 325.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sukanta Nayak",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.K",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sumesh E P",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 327.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sunil Kumar Singh",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 223",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sunkesula Moulana Abdul Kalam Azad",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Sunny Dayal Vanambathina",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 422.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Suseela Vappangi",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 202.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Susmitha Shyamsundar",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Swati Shukla",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "CB 327.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. T Ramana",
+      "department": "SAS",
+      "subjects": "-",
+      "cabin_number": "CB 326.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. T Sudhakar",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 229",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Tania Chakravarthy",
+      "department": "Social Sciences",
+      "subjects": "-",
+      "cabin_number": "AB-2 224.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Tannistha Dasgupta",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Tanuj Kumar",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Thahiya Afzal R",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Triveni Rajashekar Mandlimath",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "CB 116.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Tufan Ghosh",
+      "department": "Department of Chemistry",
+      "subjects": "-",
+      "cabin_number": "AB-2 125.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Udit Narayana Kar",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 310.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Umakanta Nanda",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Usha Seshadri",
+      "department": "VIT-AP School of Business ",
+      "subjects": "-",
+      "cabin_number": "AB-1 410",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. V Raja",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Varunkumar Merugu",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 203.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Vatambeti Ramesh",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 128.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Vemula Ramakrishna Reddy",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 G23.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Venkatrajam Marka",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-1 229",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Vikas Mehra",
+      "department": "VIT-AP School of Business ",
+      "subjects": "-",
+      "cabin_number": "AB-1 410",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Vikash Kumar Singh",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 106",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Vinod Kiran K",
+      "department": "SENSE",
+      "subjects": "-",
+      "cabin_number": "AB-1 109",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Yada Nandukumar",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.J",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Yamarthi Narasimha Rao",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. G Bharath Reddy",
+      "department": "Department of Electronics Engineering",
+      "subjects": "-",
+      "cabin_number": "CB 204.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Dr. Virendra Kumar Verma",
+      "department": "Department of Physics",
+      "subjects": "-",
+      "cabin_number": "CB 116.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Ajay Kumar Mallick",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 205.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Avin Tiwari",
+      "department": "VSL",
+      "subjects": "-",
+      "cabin_number": "CB 103.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Bommareddy Lokesh",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 227.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Dheeraj Kumar",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "CB G05.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Gouranga Mandal",
+      "department": "School of Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 313.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Jagadeesh M S",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 115.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Pramod Kumar",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.H",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Pranav Anand Ojha",
+      "department": "VSL",
+      "subjects": "-",
+      "cabin_number": "CB 326.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Ramkumar D",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 229.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. U M Gopala Krishna",
+      "department": "VSB",
+      "subjects": "-",
+      "cabin_number": "CB 227.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Y Mohamed Sirajudeen",
+      "department": "School of Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-2 124.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Asish Kumar Dalai",
+      "department": "Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Carlin Pouamou",
+      "department": "VISH",
+      "subjects": "-",
+      "cabin_number": "AB-2 G24.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Chandan Vishwas",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 307.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Ganesh Lakshmana Kumar Moganti",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 329.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Kolluri Rajesh",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "CB 227.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Maddikera Kalyan Chakravarthi",
+      "department": "Electronics and Communication Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 129",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Mohamed Iqbal M",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.E",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Nihar Ranjan Pradhan",
+      "department": "SCOPE",
+      "subjects": "-",
+      "cabin_number": "AB-2 225.I",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Pankaj Kumar",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "AB-2 325.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Samuel Johnson Israel K",
+      "department": "VIT-AP School of Business ",
+      "subjects": "-",
+      "cabin_number": "AB-1 410",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Tauseef Khan",
+      "department": "SCOPE ",
+      "subjects": "-",
+      "cabin_number": "AB-1 162",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Mr. Vasili B V Nagarjuna",
+      "department": "SAS ",
+      "subjects": "-",
+      "cabin_number": "CB G05.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. Anindita Shome",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "CB G04.A",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. M Sneha Goud",
+      "department": "VIT-AP School of Law ",
+      "subjects": "-",
+      "cabin_number": "CB G07.G",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. Neelima Adapa",
+      "department": "Department of Languages",
+      "subjects": "-",
+      "cabin_number": "CB G04.F",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. Archana Tiwari",
+      "department": "Department of Mathematics",
+      "subjects": "-",
+      "cabin_number": "CB 128.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. Beebi Naseeba",
+      "department": "School of Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 425.B",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. Chitti Amrita Gulshan",
+      "department": "VIT-AP School of Law ",
+      "subjects": "-",
+      "cabin_number": "AB-2 416",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. Kanaka Himabindu Pottumuthu",
+      "department": "VIT-AP School of Business ",
+      "subjects": "-",
+      "cabin_number": "AB-1 425.D",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. Morampudi Mahathi",
+      "department": "VIT-AP School of Law ",
+      "subjects": "-",
+      "cabin_number": "AB-2 416.C",
+      "email": "-",
+      "phone": "-"
+    },
+    {
+      "name": "Ms. Mukul Majhi",
+      "department": "School of Computer Science and Engineering",
+      "subjects": "-",
+      "cabin_number": "AB-1 424.F",
+      "email": "-",
+      "phone": "-"
+    }
+  ]
+}
