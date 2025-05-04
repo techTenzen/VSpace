@@ -40,7 +40,6 @@ export default function SubjectRow({ subject, onEdit }: SubjectRowProps) {
   const markAttendanceMutation = useMutation({
     mutationFn: async ({ id, attended }: { id: number; attended: boolean }) => {
       const response = await apiRequest("PATCH", `/api/subjects/${id}/attendance`, { attended });
-      return response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/subjects"] });
@@ -77,7 +76,6 @@ export default function SubjectRow({ subject, onEdit }: SubjectRowProps) {
   const archiveSubjectMutation = useMutation({
     mutationFn: async (id: number) => {
       const response = await apiRequest("PATCH", `/api/subjects/${id}/archive`, {});
-      return response.json();
     },
     onSuccess: () => {
       toast({

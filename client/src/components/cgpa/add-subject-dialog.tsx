@@ -72,7 +72,6 @@ export default function AddSubjectDialog({
     mutationFn: async (data: CourseFormValues) => {
       const courseData = { ...data, semesterId };
       const response = await apiRequest("POST", `/api/semesters/${semesterId}/courses`, courseData);
-      return response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/semesters"] });
@@ -100,7 +99,6 @@ export default function AddSubjectDialog({
     mutationFn: async (data: CourseFormValues) => {
       const courseData = { ...data, semesterId };
       const response = await apiRequest("PUT", `/api/courses/${existingCourse?.id}`, courseData);
-      return response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/semesters"] });

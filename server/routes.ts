@@ -16,6 +16,16 @@ function isAuthenticated(req: any, res: any, next: any) {
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth routes (login, register, logout, get user)
   setupAuth(app);
+
+  app.put("/api/user/profile", isAuthenticated, async (req, res) => {
+    try {
+      const updatedUser = await storage.updateUserProfile(req.user!.id, req.body);
+      res.json(updatedUser);
+    } catch (error) {
+      console.error("Error updating user profile:", error);
+      res.status(500).json({ message: "Failed to update profile" });
+    }
+  });
   
   // Skills routes
   app.get("/api/skills", isAuthenticated, async (req, res) => {

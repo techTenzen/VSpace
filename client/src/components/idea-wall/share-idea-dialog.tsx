@@ -61,7 +61,6 @@ export default function ShareIdeaDialog({ open, onOpenChange }: ShareIdeaDialogP
   const shareIdeaMutation = useMutation({
     mutationFn: async (data: IdeaFormValues) => {
       const response = await apiRequest("POST", "/api/ideas", data);
-      return response;
     },
     onMutate: async (newIdea) => {
       await queryClient.cancelQueries({ queryKey: ["/api/ideas"] });

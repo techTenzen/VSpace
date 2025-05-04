@@ -45,6 +45,7 @@ export default function IdeaWallPage() {
     refetchOnWindowFocus: true,
     refetchOnMount: true
   });
+  console.log("Fetched ideas:", data); // Confirm it's hitting the endpoint
 
   const ideas: IdeaWithUser[] = data ?? [];
 

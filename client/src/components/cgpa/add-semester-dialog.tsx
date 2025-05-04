@@ -56,7 +56,6 @@ export default function AddSemesterDialog({
   const addSemesterMutation = useMutation({
     mutationFn: async (data: SemesterFormValues) => {
       const response = await apiRequest("POST", "/api/semesters", data);
-      return response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/semesters"] });
@@ -83,7 +82,6 @@ export default function AddSemesterDialog({
     mutationFn: async (data: SemesterFormValues) => {
       // Assuming there's an endpoint for updating semester
       const response = await apiRequest("PUT", `/api/semesters/${existingSemester?.id}`, data);
-      return response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/semesters"] });

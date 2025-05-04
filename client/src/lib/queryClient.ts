@@ -1,127 +1,94 @@
-import { QueryClient, QueryFunction } from "@tanstack/react-query";
-
-/**
- * Helper function to throw an error if the response is not OK
- */
-async function throwIfResNotOk(res: Response) {
-  if (!res.ok) {
-    // Try to parse the error as JSON first, fall back to text
-    try {
-      const errorData = await res.json();
-      throw new Error(
-          errorData.message || `${res.status}: ${res.statusText}`
-      );
-    } catch (e) {
-      // If JSON parsing fails, get the text
-      const text = (await res.text()) || res.statusText;
-      throw new Error(`${res.status}: ${text}`);
-    }
-  }
-}
-
-/**
- * Generic API request function with improved error handling
- * Returns the parsed JSON data instead of the raw Response
- */
-export async function apiRequest(
-    method: string,
-    url: string,
-    data?: unknown | undefined,
-): Promise<any> {
-  try {
-    const res = await fetch(url, {
-      method,
-      headers: data ? { "Content-Type": "application/json" } : {},
-      body: data ? JSON.stringify(data) : undefined,
-      credentials: "include",
-    });
-
-    // Log response status for debugging
-    console.log(`API ${method} ${url} - Status: ${res.status}`);
-
-    // Handle empty responses (like 204 No Content)
-    if (res.status === 204) {
-      return { ok: true };
-    }
-
-    // Handle errors
-    if (!res.ok) {
-      await throwIfResNotOk(res);
-    }
-
-    // For DELETE requests that don't return content
-    if (method === "DELETE" && res.status === 204) {
-      return { ok: true };
-    }
-
-    // Parse and return JSON for other requests
-    try {
-      return await res.json();
-    } catch (err) {
-      console.log(`Response not JSON for ${method} ${url}`);
-      return { ok: true };
-    }
-  } catch (error) {
-    console.error(`API request error for ${method} ${url}:`, error);
-    throw error;
-  }
-}
-
-type UnauthorizedBehavior = "returnNull" | "throw";
-
-/**
- * Query function factory with authorization handling
- */
-export const getQueryFn: <T>(options: {
-  on401: UnauthorizedBehavior;
-}) => QueryFunction<T> =
-    ({ on401: unauthorizedBehavior }) =>
-        async ({ queryKey }) => {
-          try {
-            const url = queryKey[0] as string;
-            console.log(`Fetching data from: ${url}`);
-
-            const res = await fetch(url, {
-              credentials: "include",
-            });
-
-            // Handle 401 according to specified behavior
-            if (res.status === 401) {
-              console.log(`401 Unauthorized from ${url}, behavior: ${unauthorizedBehavior}`);
-              if (unauthorizedBehavior === "returnNull") {
-                return null;
-              }
-              throw new Error("Unauthorized access");
-            }
-
-            await throwIfResNotOk(res);
-
-            // For empty responses
-            if (res.status === 204) {
-              return null;
-            }
-
-            // Parse response
-            const data = await res.json();
-            console.log(`Data received from ${url}:`, data);
-            return data;
-          } catch (error) {
-            console.error(`Query error for ${queryKey[0]}:`, error);
-            throw error;
-          }
-        };
-
+import { QueryClient } from "@tanstack/react-query";
+const defaultQueryFn = async ({ queryKey }) => {
+  const url = queryKey[0]; // assuming first item in queryKey is URL string
+  return apiRequest("GET", url);
+};
 export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      queryFn: getQueryFn({ on401: "throw" }),
-      refetchInterval: false,
-      refetchOnWindowFocus: true,
-      staleTime: 1000 * 60 * 5, // 5 minutes
-      retry: false,
+      queryFn: defaultQueryFn, // 👈 Add this line
+      staleTime: 1000 * 60, // 1 minute
+      refetchOnWindowFocus: false,
+      retry: 1,
     },
     mutations: {
-      retry: false,
+      retry: 0,
     },
   },
 });
+
+/**
+ * Performs a fetch request with support for session cookies
+ * and handles different response content types appropriately
+ */
+export async function apiRequest<T = any>(
+    method: string,
+    url: string,
+    data?: any
+): Promise<T> {
+  const res = await fetch(url, {
+    method,
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: data ? JSON.stringify(data) : undefined,
+  });
+
+  if (!res.ok) {
+    // Handle error responses
+    try {
+      const err = await res.json();
+      throw new Error(err.message || "Request failed");
+    } catch (parseError) {
+      // If JSON parsing fails, throw error with status
+      throw new Error(`Request failed: ${res.status} ${res.statusText}`);
+    }
+  }
+
+  // Check if response has content and a content-type header
+  const contentType = res.headers.get("Content-Type");
+
+  // For empty responses or non-JSON content types
+  if (res.status === 204 || !contentType || !contentType.includes("application/json")) {
+    // Return a standardized success object for non-JSON responses
+    return { success: true, status: res.status } as unknown as T;
+  }
+
+  // For JSON responses
+  try {
+    return await res.json();
+  } catch (error) {
+    console.error("Error parsing JSON response:", error);
+    // Return a standardized object when JSON parsing fails
+    return { success: true, status: res.status, text: await res.text() } as unknown as T;
+  }
+}
+
+/**
+ * Helper for generating query functions, with optional 401 fallback
+ */
+export function getQueryFn<T = any>({
+                                      on401 = "throw",
+                                    }: {
+  on401?: "throw" | "returnNull";
+} = {}) {
+  return async (): Promise<T | null> => {
+    const res = await fetch("/api/user", {
+      method: "GET",
+      credentials: "include",
+    });
+
+    if (res.status === 401) {
+      if (on401 === "returnNull") return null;
+      throw new Error("Unauthorized");
+    }
+
+    if (!res.ok) {
+      const error = await res.json().catch(() => ({}));
+      throw new Error(error.message || "Something went wrong");
+    }
+
+    return res.json();
+  };
+}

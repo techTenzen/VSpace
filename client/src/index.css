@@ -4,70 +4,75 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    /* Color Scheme: Black, Charcoal, Bright Orange */
+    --background: 0 0% 100%; /* white background */
+    --foreground: 0 0% 3.9%; /* black */
+    --card: 0 0% 100%; /* white card */
+    --card-foreground: 0 0% 3.9%; /* black */
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 262.1 52.4% 54.1%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --popover-foreground: 0 0% 3.9%; /* black */
+    --primary: 10 100% 50%; /* bright orange */
+    --primary-foreground: 0 0% 100%; /* white */
+    --secondary: 0 0% 0%; /* charcoal */
+    --secondary-foreground: 0 0% 93%; /* light grey */
+    --muted: 0 0% 40%; /* dark grey */
+    --muted-foreground: 0 0% 80%; /* lighter grey */
+    --accent: 10 100% 50%; /* bright orange */
+    --accent-foreground: 0 0% 100%; /* white */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 262.1 52.4% 54.1%;
+    --border: 0 0% 40%; /* charcoal grey */
+    --input: 0 0% 80%; /* grey input fields */
+    --ring: 10 100% 50%; /* orange for focus */
     --radius: 0.5rem;
+    --background-color: #111827; /* Charcoal */
+    --secondary-background: #0c111a; /* Darker Charcoal */
+    --accent-orange: #ff5a00; /* Bright Orange */
+    --light-grey: #a0aec0; /* Light Grey */
+    --avatar-fallback-bg: linear-gradient(135deg, #ff5a00 0%, #2952cc 100%); /* Gradient for avatar fallback */
+    --highlight-bg: linear-gradient(90deg, rgba(255, 90, 0, 0.2) 0%, rgba(255, 90, 0, 0.05) 100%); /* Highlight background for active state */
+    --search-bg: rgba(255, 255, 255, 0.05); /* Dark input background */
+    --search-border: 1px solid rgba(255, 255, 255, 0.1); /* Search input border */
+    --input-border-focus: 1px solid rgba(255, 90, 0, 0.5); /* Orange border on focus */
+    --profile-card-bg: #000000; /* Profile card background */
+    --separator-color: rgba(255, 255, 255, 0.05); /* Separator color */
+    --sidebar-bg: #000000; /* Black background for the sidebar */
+    --dark-orange-gradient: linear-gradient(90deg, rgba(255, 90, 0, 0.7) 0%, rgba(255, 90, 0, 0.2) 100%); /* Darker orange gradient for buttons */
   }
 
   .dark {
-    /* Base colors */
-    --background: 220 20% 5%;
-    --foreground: 0 0% 94%;
-    --card: 220 20% 7%;
+    /* Dark Mode Custom Colors */
+    --background: 220 20% 5%; /* Dark background */
+    --foreground: 0 0% 94%; /* Light grey text */
+    --card: 220 20% 7%; /* Dark card */
     --card-foreground: 0 0% 94%;
-    --popover: 220 20% 6%;
+    --popover: 220 20% 6%; /* Dark popover */
     --popover-foreground: 0 0% 94%;
-
-    /* Winster Hub blue */
-    --primary: 218 100% 66%; /* #3772FF */
-    --primary-foreground: 0 0% 100%;
-
-    /* Supporting colors */
-    --secondary: 220 18% 12%;
-    --secondary-foreground: 0 0% 94%;
-    --muted: 220 15% 15%;
-    --muted-foreground: 218 10% 70%; /* #a0aec0 */
-    --accent: 218 100% 66%;
-    --accent-foreground: 0 0% 94%;
+    --primary: 10 100% 50%; /* Bright orange */
+    --primary-foreground: 0 0% 100%; /* white */
+    --secondary: 0 0% 0%; /* Charcoal */
+    --secondary-foreground: 0 0% 93%; /* light grey */
+    --muted: 0 0% 40%; /* Dark grey */
+    --muted-foreground: 0 0% 80%; /* Lighter grey */
+    --accent: 10 100% 50%; /* Bright orange */
+    --accent-foreground: 0 0% 100%; /* white */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 94%;
-    --border: 220 15% 15%;
-    --input: 220 15% 15%;
-    --ring: 218.100% 66%;
-
-    /* Chart colors (matching Winster Hub) */
-    --chart-1: 218 100% 66%; /* WIN blue */
-    --chart-2: 27 87% 54%;   /* BTC orange */
-    --chart-3: 174 44% 41%;  /* USDT green */
-    --chart-4: 198 86% 50%;
-    --chart-5: 323 85% 55%;
-
-    /* Sidebar - Winster Hub exact colors */
-    --sidebar-from: 222 31% 11%;     /* #111827 - top of gradient */
-    --sidebar-to: 217 43% 7%;        /* #0c111a - bottom of gradient */
-    --sidebar-foreground: 218 10% 70%; /* #a0aec0 */
-    --sidebar-primary: 218 100% 66%;   /* #3772ff */
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-active-from: 218 100% 13%; /* Active nav gradient start */
-    --sidebar-active-to: 218 90% 5%;     /* Active nav gradient end */
-    --sidebar-border: 220 20% 12%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 40%; /* Charcoal grey */
+    --input: 0 0% 80%; /* Grey input fields */
+    --ring: 10 100% 50%; /* Orange ring on focus */
+    --radius: 0.5rem;
+    --background-color: #0c111a; /* Dark background */
+    --secondary-background: #111827; /* Darker background */
+    --accent-orange: #ff5a00; /* Bright orange */
+    --light-grey: #a0aec0; /* Light grey */
+    --highlight-bg: linear-gradient(90deg, rgba(255, 90, 0, 0.2) 0%, rgba(255, 90, 0, 0.05) 100%);
+    --avatar-fallback-bg: linear-gradient(135deg, #ff5a00 0%, #2f2f2f 100%);
+    --search-bg: rgba(255, 255, 255, 0.05);
+    --search-border: 1px solid rgba(255, 255, 255, 0.1);
+    --input-border-focus: 1px solid rgba(255, 90, 0, 0.5);
+    --profile-card-bg: #000000;
+    --separator-color: rgba(255, 255, 255, 0.05);
   }
 
   * {
@@ -75,7 +80,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-secondary text-secondary-foreground; /* Charcoal background and light text */
   }
 
   /* Custom scrollbar for the modern look */
@@ -85,67 +90,67 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-secondary;
+    @apply bg-secondary; /* Charcoal background */
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-accent rounded-sm;
+    @apply bg-accent rounded-sm; /* Bright orange thumb */
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary;
+    @apply bg-primary; /* Bright orange when hovered */
   }
 }
 
 /* Winster Hub specific components */
 @layer components {
-  /* Sidebar with the exact gradient */
+  /* Sidebar with charcoal background */
   .winster-sidebar {
     @apply flex flex-col w-64 shrink-0 h-screen;
-    background: linear-gradient(180deg, #111827 0%, #0c111a 100%);
-    color: #a0aec0;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--sidebar-bg); /* Black background for sidebar */
+    color: var(--light-grey); /* Light grey text */
+    border-right: 1px solid var(--separator-color);
   }
 
-  /* Active navigation item with the exact gradient */
+  /* Active navigation item with orange accent */
   .winster-nav-active {
-    background: linear-gradient(90deg, rgba(55, 114, 255, 0.2) 0%, rgba(55, 114, 255, 0.05) 100%);
-    color: #ffffff;
+    background: var(--highlight-bg); /* Bright orange active background */
+    color: #ffffff; /* White text */
   }
 
-  /* Navigation item hover state */
+  /* Default navigation item */
   .winster-nav-item {
     @apply flex items-center h-10 px-3 py-2 text-sm rounded-md transition-colors;
-    color: #a0aec0;
+    color: var(--light-grey); /* Light grey text */
   }
 
   .winster-nav-item:hover:not(.winster-nav-active) {
-    background: rgba(55, 114, 255, 0.05);
-    color: #d1d8e0;
+    background: rgba(255, 90, 0, 0.05); /* Orange hover effect */
+    color: #ffffff; /* White on hover */
   }
 
-  /* Blue card background for profile/logo areas */
+  /* Card with bright orange gradient */
   .winster-card-blue {
-    background: linear-gradient(90deg, rgba(55, 114, 255, 0.15) 0%, rgba(55, 114, 255, 0.05) 100%);
+    background: var(--dark-orange-gradient); /* Darker orange gradient for buttons */
     @apply rounded-lg p-4;
   }
 
-  /* Search input styling */
+  /* Search input field */
   .winster-search {
     @apply w-full py-2 pl-10 pr-4 rounded-xl text-sm;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #a0aec0;
+    background-color: var(--search-bg); /* Dark input field */
+    border: var(--search-border); /* Orange border */
+    color: var(--light-grey); /* Light grey text */
   }
 
   .winster-search:focus {
     @apply outline-none;
-    border: 1px solid rgba(55, 114, 255, 0.5);
+    border: var(--input-border-focus); /* Bright orange border on focus */
   }
 
-  /* Avatar styling */
+  /* Avatar fallback with gradient */
   .winster-avatar-fallback {
-    background: linear-gradient(135deg, #3772ff 0%, #2952cc 100%);
+    background: var(--avatar-fallback-bg); /* Orange to charcoal gradient */
     color: white;
   }
 }

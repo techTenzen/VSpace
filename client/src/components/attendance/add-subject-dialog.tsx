@@ -63,7 +63,6 @@ export default function AddSubjectDialog({
   const addSubjectMutation = useMutation({
     mutationFn: async (data: SubjectFormValues) => {
       const response = await apiRequest("POST", "/api/subjects", data);
-      return response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/subjects"] });
@@ -90,7 +89,6 @@ export default function AddSubjectDialog({
   const updateSubjectMutation = useMutation({
     mutationFn: async (data: SubjectFormValues) => {
       const response = await apiRequest("PUT", `/api/subjects/${existingSubject?.id}`, data);
-      return response.json();
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/subjects"] });

@@ -7,6 +7,7 @@ import {
 import { UpdateUserProfile, User } from "@shared/schema";
 import { getQueryFn, apiRequest, queryClient } from "../lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate, useLocation } from "react-router-dom";
 
 type AuthContextType = {
   user: User | null;
@@ -47,6 +48,8 @@ type OnboardingData = {
 export const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
+  const navigate = useNavigate();
+  const location = useLocation(); // Add location to check current path
   const { toast } = useToast();
   const [isInitialAuthCheckDone, setIsInitialAuthCheckDone] = useState(false);
 
@@ -67,6 +70,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [isSuccess]);
 
+  // Modified effect to prevent redirect loop - only redirect if on auth page or root
+  useEffect(() => {
+    if (user && isInitialAuthCheckDone) {
+      // Only redirect if on auth page or root path
+      if (location.pathname === "/auth" || location.pathname === "/") {
+        navigate("/dashboard");
+      }
+    }
+  }, [user, isInitialAuthCheckDone, navigate, location.pathname]);
+
   const loginMutation = useMutation({
     mutationFn: async (credentials: LoginData) => {
       // apiRequest already returns parsed JSON data
@@ -74,6 +87,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     },
     onSuccess: (user: User) => {
       queryClient.setQueryData(["/api/user"], user);
+      navigate("/dashboard");
 
       // Clear all existing queries when the user changes
       queryClient.removeQueries({ queryKey: ["/api/subjects"] });
@@ -102,6 +116,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     },
     onSuccess: (user: User) => {
       queryClient.setQueryData(["/api/user"], user);
+      navigate("/dashboard");
       toast({
         title: "Registration successful",
         description: "Please complete your profile to get started.",
@@ -170,6 +185,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       queryClient.removeQueries({ queryKey: ["/api/semesters"] });
       queryClient.removeQueries({ queryKey: ["/api/ideas"] });
       queryClient.removeQueries({ queryKey: ["/api/skills"] });
+
+      navigate("/auth"); // Redirect to auth page after logout
 
       toast({
         title: "Logged out successfully",

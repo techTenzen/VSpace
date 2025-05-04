@@ -70,9 +70,9 @@ export default function AddSkillDialog({ open, onOpenChange, existingSkill }: Ad
   });
 
   const addSkillMutation = useMutation({
+    // FIX: Don't call .json() here - the response body can only be read once
     mutationFn: async (data: SkillFormValues) => {
-      const response = await apiRequest("POST", "/api/skills", data);
-      return response.json();
+      return await apiRequest("POST", "/api/skills", data);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/skills"] });
@@ -99,9 +99,9 @@ export default function AddSkillDialog({ open, onOpenChange, existingSkill }: Ad
   });
 
   const updateSkillMutation = useMutation({
+    // FIX: Same fix as above - don't read response body twice
     mutationFn: async (data: SkillFormValues) => {
-      const response = await apiRequest("PUT", `/api/skills/${existingSkill.id}`, data);
-      return response.json();
+      return await apiRequest("PUT", `/api/skills/${existingSkill.id}`, data);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/skills"] });
@@ -131,131 +131,131 @@ export default function AddSkillDialog({ open, onOpenChange, existingSkill }: Ad
   const isPending = addSkillMutation.isPending || updateSkillMutation.isPending;
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[500px]">
-        <DialogHeader>
-          <DialogTitle>{isEditMode ? "Edit Skill" : "Add New Skill"}</DialogTitle>
-          <DialogDescription>
-            {isEditMode 
-              ? "Update your skill proficiency and details." 
-              : "Track a new skill to monitor your growth."}
-          </DialogDescription>
-        </DialogHeader>
+      <Dialog open={open} onOpenChange={onOpenChange}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle>{isEditMode ? "Edit Skill" : "Add New Skill"}</DialogTitle>
+            <DialogDescription>
+              {isEditMode
+                  ? "Update your skill proficiency and details."
+                  : "Track a new skill to monitor your growth."}
+            </DialogDescription>
+          </DialogHeader>
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Skill Name</FormLabel>
-                  <FormControl>
-                    <Input 
-                      placeholder="e.g., Java Programming, Public Speaking" 
-                      {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Skill Name</FormLabel>
+                        <FormControl>
+                          <Input
+                              placeholder="e.g., Java Programming, Public Speaking"
+                              {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                  )}
+              />
 
-            <FormField
-              control={form.control}
-              name="category"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Category</FormLabel>
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a category" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value="Technical">Technical</SelectItem>
-                      <SelectItem value="Soft Skills">Soft Skills</SelectItem>
-                      <SelectItem value="Domain Knowledge">Domain Knowledge</SelectItem>
-                      <SelectItem value="Languages">Languages</SelectItem>
-                      <SelectItem value="Creative">Creative</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+              <FormField
+                  control={form.control}
+                  name="category"
+                  render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Category</FormLabel>
+                        <Select
+                            onValueChange={field.onChange}
+                            defaultValue={field.value}
+                        >
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select a category" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="Technical">Technical</SelectItem>
+                            <SelectItem value="Soft Skills">Soft Skills</SelectItem>
+                            <SelectItem value="Domain Knowledge">Domain Knowledge</SelectItem>
+                            <SelectItem value="Languages">Languages</SelectItem>
+                            <SelectItem value="Creative">Creative</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                  )}
+              />
 
-            <FormField
-              control={form.control}
-              name="proficiency"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Proficiency ({sliderValue}/5)</FormLabel>
-                  <FormControl>
-                    <Slider
-                      min={1}
-                      max={5}
-                      step={0.5}
-                      value={[sliderValue]}
-                      onValueChange={(value) => {
-                        setSliderValue(value[0]);
-                        field.onChange(value[0]);
-                      }}
-                      className="py-4"
-                    />
-                  </FormControl>
-                  <FormDescription>
+              <FormField
+                  control={form.control}
+                  name="proficiency"
+                  render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Proficiency ({sliderValue}/5)</FormLabel>
+                        <FormControl>
+                          <Slider
+                              min={1}
+                              max={5}
+                              step={0.5}
+                              value={[sliderValue]}
+                              onValueChange={(value) => {
+                                setSliderValue(value[0]);
+                                field.onChange(value[0]);
+                              }}
+                              className="py-4"
+                          />
+                        </FormControl>
+                        <FormDescription>
                     <span className="flex justify-between text-xs">
                       <span>Beginner</span>
                       <span>Intermediate</span>
                       <span>Expert</span>
                     </span>
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                        </FormDescription>
+                        <FormMessage />
+                      </FormItem>
+                  )}
+              />
 
-            <FormField
-              control={form.control}
-              name="notes"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Notes (Optional)</FormLabel>
-                  <FormControl>
-                    <Textarea 
-                      placeholder="Add any details or notes about your skill"
-                      className="h-20 resize-none"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+              <FormField
+                  control={form.control}
+                  name="notes"
+                  render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Notes (Optional)</FormLabel>
+                        <FormControl>
+                          <Textarea
+                              placeholder="Add any details or notes about your skill"
+                              className="h-20 resize-none"
+                              {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                  )}
+              />
 
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button variant="outline" type="button">Cancel</Button>
-              </DialogClose>
-              <Button type="submit" disabled={isPending}>
-                {isPending ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" /> 
-                    {isEditMode ? "Updating..." : "Adding..."}
-                  </>
-                ) : (
-                  isEditMode ? "Update Skill" : "Add Skill"
-                )}
-              </Button>
-            </DialogFooter>
-          </form>
-        </Form>
-      </DialogContent>
-    </Dialog>
+              <DialogFooter>
+                <DialogClose asChild>
+                  <Button variant="outline" type="button">Cancel</Button>
+                </DialogClose>
+                <Button type="submit" disabled={isPending}>
+                  {isPending ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        {isEditMode ? "Updating..." : "Adding..."}
+                      </>
+                  ) : (
+                      isEditMode ? "Update Skill" : "Add Skill"
+                  )}
+                </Button>
+              </DialogFooter>
+            </form>
+          </Form>
+        </DialogContent>
+      </Dialog>
   );
 }

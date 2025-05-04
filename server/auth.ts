@@ -36,8 +36,9 @@ export function setupAuth(app: Express) {
     store: storage.sessionStore,
     cookie: {
       maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
-      secure: process.env.NODE_ENV === "production",
-    }
+          secure: process.env.NODE_ENV === "production" && !process.env.DEV_HTTPS,
+          sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+        httpOnly: true    }
   };
 
   app.set("trust proxy", 1);
@@ -101,7 +102,7 @@ export function setupAuth(app: Express) {
     passport.authenticate("local", (err, user, info) => {
       if (err) return next(err);
       if (!user) return res.status(401).json({ message: "Invalid email or password" });
-      
+
       req.login(user, (err) => {
         if (err) return next(err);
         return res.status(200).json(user);
@@ -112,7 +113,7 @@ export function setupAuth(app: Express) {
   app.post("/api/logout", (req, res, next) => {
     req.logout((err) => {
       if (err) return next(err);
-      res.sendStatus(200);
+      res.status(200).json({ message: "Logout successful" });
     });
   });
 
@@ -121,20 +122,9 @@ export function setupAuth(app: Express) {
     res.json(req.user);
   });
 
-  app.put("/api/user/profile", async (req, res, next) => {
-    if (!req.isAuthenticated()) return res.status(401).json({ message: "Not authenticated" });
-    
-    try {
-      const updatedUser = await storage.updateUserProfile(req.user.id, req.body);
-      res.json(updatedUser);
-    } catch (error) {
-      next(error);
-    }
-  });
-
   app.put("/api/user/onboarding", async (req, res, next) => {
     if (!req.isAuthenticated()) return res.status(401).json({ message: "Not authenticated" });
-    
+
     try {
       const updatedUser = await storage.completeOnboarding(req.user.id, req.body);
       res.json(updatedUser);
