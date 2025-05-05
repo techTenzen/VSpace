@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 import { ArrowUpRight, CheckCircle, AlertTriangle, TrendingUp, ChevronRight } from "lucide-react";
@@ -103,7 +103,7 @@ export default function FeatureCard({
   };
 
   return (
-      <Link href={link}>
+      <Link to={link}>
         <div
             className={cn(
                 "relative overflow-hidden rounded-xl bg-card transition-all duration-300",

@@ -19,6 +19,49 @@ import { useState } from "react";
 import { Redirect } from "wouter";
 import { Loader2 } from "lucide-react";
 
+// Animated Ring Component
+type RingProps = {
+    color: string;
+    duration: number;
+    reverse?: boolean;
+    zIndex?: number;
+};
+const ringShapes = [
+    "38% 62% 63% 37% / 41% 44% 56% 59%",
+    "41% 44% 56% 59%/38% 62% 63% 37%",
+];
+function Ring({ color, duration, reverse = false, zIndex = 1 }: RingProps) {
+    const animationName = `ring-rotate-${color.replace("#", "")}-${duration}-${reverse ? "rev" : "fwd"}`;
+    if (typeof window !== "undefined" && !document.getElementById(animationName)) {
+        const style = document.createElement("style");
+        style.id = animationName;
+        style.innerHTML = `
+            @keyframes ${animationName} {
+                0% { transform: rotate(${reverse ? 360 : 0}deg); }
+                100% { transform: rotate(${reverse ? 0 : 360}deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    const borderRadius = reverse ? ringShapes[1] : ringShapes[0];
+    return (
+        <div
+            style={{
+                position: "absolute",
+                inset: 0,
+                border: "3px solid #fff",
+                borderRadius,
+                transition: "0.5s",
+                zIndex,
+                animation: `${animationName} ${duration}s linear infinite`,
+                pointerEvents: "none",
+                filter: `drop-shadow(0 0 20px ${color})`,
+                opacity: 0.8,
+            }}
+        />
+    );
+}
+
 const loginSchema = z.object({
     email: z.string().email("Please enter a valid email"),
     password: z.string().min(1, "Password is required"),
@@ -39,14 +82,13 @@ const registerSchema = z.object({
     termsAccepted: z.literal(true, {
         errorMap: () => ({ message: "You must accept the terms and conditions" }),
     }),
-})
-    .refine((data) => data.password === data.confirmPassword, {
-        message: "Passwords don't match",
-        path: ["confirmPassword"],
-    });
+}).refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords don't match",
+    path: ["confirmPassword"],
+});
 
 export default function AuthPage() {
-    const { user, loginMutation, registerMutation, isLoading } = useAuth();
+    const { user, loginMutation, registerMutation } = useAuth();
     const [passwordStrength, setPasswordStrength] = useState(0);
     const [activeTab, setActiveTab] = useState<string>("login");
 
@@ -83,45 +125,69 @@ export default function AuthPage() {
 
     const calculatePasswordStrength = (password: string) => {
         let strength = 0;
-
         if (password.length >= 8) strength += 1;
         if (/[A-Z]/.test(password)) strength += 1;
         if (/[a-z]/.test(password)) strength += 1;
         if (/[0-9]/.test(password)) strength += 1;
         if (/[^A-Za-z0-9]/.test(password)) strength += 1;
-
         setPasswordStrength(strength);
     };
 
-    // Redirect if already logged in
     if (user) {
         return <Redirect to="/dashboard" />;
     }
 
     return (
-        <div className="min-h-screen flex flex-col md:flex-row bg-[#22202a]">
-            {/* Left Panel - Auth Form */}
-            <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
-                <div className="mb-8">
-                    <h1 className="text-3xl font-bold mb-2 text-white">
-                        Welcome to <span className="text-orange-500">VIT Skill Space</span>
-                    </h1>
-                    <p className="text-gray-400">
-                        Your comprehensive toolkit for personal and academic growth at VIT-AP.
-                    </p>
+        <div className="min-h-screen flex items-center justify-center bg-[#22202a] relative overflow-hidden">
+            {/* Animated Rings Background */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="relative w-[750px] h-[750px]">
+                    <Ring color="#00ff0a" duration={6} zIndex={1} />
+                    <Ring color="#ff0057" duration={4} zIndex={2} reverse />
+                    <Ring color="#fffd44" duration={10} zIndex={3} />
                 </div>
+            </div>
 
-                <Card className="border-gray-800 bg-[#26223a]">
-                    <CardContent className="p-6">
+            {/* Auth Content */}
+            <div className="w-full max-w-xl mx-4 relative z-10">
+                <Card className="border-0 bg-[#26223a]/90 backdrop-blur-xl rounded-2xl shadow-xl">
+                    <CardContent className="p-10">
+                        <div className="mb-8 text-center">
+                            <h1 className="text-4xl font-bold text-white mb-2">
+                                Welcome to <span className="text-orange-500">VIT Skill Space</span>
+                            </h1>
+                            <p className="text-gray-300">
+                                Your comprehensive toolkit for personal and academic growth at VIT-AP
+                            </p>
+                        </div>
+
                         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                            <TabsList className="grid w-full grid-cols-2 mb-6">
-                                <TabsTrigger value="login" className={`flex-1 py-2 rounded-t-lg font-semibold transition-all duration-300 ${activeTab === 'login' ? 'bg-gradient-to-r from-orange-500 to-orange-700 text-white shadow-lg' : 'bg-gray-800 text-gray-400 hover:text-white'}`}>Login</TabsTrigger>
-                                <TabsTrigger value="register" className={`flex-1 py-2 rounded-t-lg font-semibold transition-all duration-300 ${activeTab === 'register' ? 'bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-lg' : 'bg-gray-800 text-gray-400 hover:text-white'}`}>Sign Up</TabsTrigger>
+                            <TabsList className="flex w-full overflow-hidden rounded-xl bg-[#23243a] p-1 mb-8">
+                                <TabsTrigger
+                                    value="login"
+                                    className={`flex-1 py-3 font-semibold text-lg transition-all rounded-none
+                                        ${activeTab === 'login'
+                                        ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow'
+                                        : 'text-gray-400 hover:text-white bg-transparent'
+                                    }`}
+                                >
+                                    Login
+                                </TabsTrigger>
+                                <TabsTrigger
+                                    value="register"
+                                    className={`flex-1 py-3 font-semibold text-lg transition-all rounded-none
+                                        ${activeTab === 'register'
+                                        ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow'
+                                        : 'text-gray-400 hover:text-white bg-transparent'
+                                    }`}
+                                >
+                                    Sign Up
+                                </TabsTrigger>
                             </TabsList>
 
                             <TabsContent value="login">
                                 <Form {...loginForm}>
-                                    <form onSubmit={loginForm.handleSubmit(onLoginSubmit)} className="space-y-4">
+                                    <form onSubmit={loginForm.handleSubmit(onLoginSubmit)} className="space-y-6">
                                         <FormField
                                             control={loginForm.control}
                                             name="email"
@@ -130,9 +196,9 @@ export default function AuthPage() {
                                                     <FormLabel className="text-gray-300">Email</FormLabel>
                                                     <FormControl>
                                                         <Input
-                                                            placeholder="youremail@vit.ac.in"
                                                             {...field}
-                                                            className="bg-[#1e1c29] border border-gray-700 text-white"
+                                                            placeholder="youremail@vit.ac.in"
+                                                            className="bg-[#1e1c29] border-gray-700 text-white rounded-xl py-5 px-4 focus:ring-2 focus:ring-orange-500"
                                                         />
                                                     </FormControl>
                                                     <FormMessage className="text-red-500" />
@@ -149,9 +215,9 @@ export default function AuthPage() {
                                                     <FormControl>
                                                         <Input
                                                             type="password"
-                                                            placeholder="••••••••"
                                                             {...field}
-                                                            className="bg-[#1e1c29] border border-gray-700 text-white"
+                                                            placeholder="••••••••"
+                                                            className="bg-[#1e1c29] border-gray-700 text-white rounded-xl py-5 px-4 focus:ring-2 focus:ring-orange-500"
                                                         />
                                                     </FormControl>
                                                     <FormMessage className="text-red-500" />
@@ -169,27 +235,26 @@ export default function AuthPage() {
                                                             <Checkbox
                                                                 checked={field.value}
                                                                 onCheckedChange={field.onChange}
-                                                                className="accent-orange-500"
+                                                                className="accent-orange-500 border-gray-600"
                                                             />
                                                         </FormControl>
-                                                        <FormLabel className="text-sm cursor-pointer text-gray-400">Remember me</FormLabel>
+                                                        <FormLabel className="text-gray-400">Remember me</FormLabel>
                                                     </FormItem>
                                                 )}
                                             />
-
-                                            <a href="#" className="text-sm text-orange-400 hover:underline">
+                                            <a href="#" className="text-orange-400 hover:text-orange-300 text-sm">
                                                 Forgot password?
                                             </a>
                                         </div>
 
                                         <Button
                                             type="submit"
-                                            className="w-full bg-gradient-to-r from-orange-500 to-orange-700 text-white font-semibold shadow-lg hover:bg-orange-600"
+                                            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-5 rounded-xl text-lg font-semibold transition-all"
                                             disabled={loginMutation.isPending}
                                         >
                                             {loginMutation.isPending ? (
                                                 <>
-                                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                                                     Logging in...
                                                 </>
                                             ) : (
@@ -202,7 +267,7 @@ export default function AuthPage() {
 
                             <TabsContent value="register">
                                 <Form {...registerForm}>
-                                    <form onSubmit={registerForm.handleSubmit(onRegisterSubmit)} className="space-y-4">
+                                    <form onSubmit={registerForm.handleSubmit(onRegisterSubmit)} className="space-y-6">
                                         <FormField
                                             control={registerForm.control}
                                             name="email"
@@ -211,9 +276,9 @@ export default function AuthPage() {
                                                     <FormLabel className="text-gray-300">Email</FormLabel>
                                                     <FormControl>
                                                         <Input
-                                                            placeholder="youremail@vit.ac.in"
                                                             {...field}
-                                                            className="bg-[#1e1c29] border border-gray-700 text-white"
+                                                            placeholder="youremail@vit.ac.in"
+                                                            className="bg-[#1e1c29] border-gray-700 text-white rounded-xl py-5 px-4 focus:ring-2 focus:ring-blue-500"
                                                         />
                                                     </FormControl>
                                                     <FormMessage className="text-red-500" />
@@ -230,33 +295,42 @@ export default function AuthPage() {
                                                     <FormControl>
                                                         <Input
                                                             type="password"
-                                                            placeholder="Create a strong password"
                                                             {...field}
-                                                            className="bg-[#1e1c29] border border-gray-700 text-white"
+                                                            placeholder="Create a strong password"
+                                                            className="bg-[#1e1c29] border-gray-700 text-white rounded-xl py-5 px-4 focus:ring-2 focus:ring-blue-500"
                                                             onChange={(e) => {
                                                                 field.onChange(e);
                                                                 calculatePasswordStrength(e.target.value);
                                                             }}
                                                         />
                                                     </FormControl>
-
-                                                    {/* Password strength indicator */}
-                                                    <div className="mt-2 flex gap-1">
-                                                        <div className={`h-1 w-1/5 rounded-full ${passwordStrength >= 1 ? 'bg-red-500' : 'bg-[#1e1c29]'}`}></div>
-                                                        <div className={`h-1 w-1/5 rounded-full ${passwordStrength >= 2 ? 'bg-red-500' : 'bg-[#1e1c29]'}`}></div>
-                                                        <div className={`h-1 w-1/5 rounded-full ${passwordStrength >= 3 ? 'bg-yellow-500' : 'bg-[#1e1c29]'}`}></div>
-                                                        <div className={`h-1 w-1/5 rounded-full ${passwordStrength >= 4 ? 'bg-green-500' : 'bg-[#1e1c29]'}`}></div>
-                                                        <div className={`h-1 w-1/5 rounded-full ${passwordStrength >= 5 ? 'bg-green-500' : 'bg-[#1e1c29]'}`}></div>
+                                                    <div className="mt-3 flex gap-1.5">
+                                                        {[...Array(5)].map((_, i) => (
+                                                            <div
+                                                                key={i}
+                                                                className={`h-1.5 w-full rounded-full ${
+                                                                    passwordStrength > i
+                                                                        ? i < 2 ? 'bg-red-500'
+                                                                            : i < 4 ? 'bg-yellow-500'
+                                                                                : 'bg-green-500'
+                                                                        : 'bg-gray-800'
+                                                                }`}
+                                                            />
+                                                        ))}
                                                     </div>
-
                                                     {passwordStrength > 0 && (
-                                                        <p className="text-xs mt-1 text-gray-400">
-                                                            {passwordStrength < 3 && <span className="text-red-500">Weak</span>}
-                                                            {passwordStrength === 3 && <span className="text-yellow-500">Medium</span>}
-                                                            {passwordStrength > 3 && <span className="text-green-500">Strong</span>}
+                                                        <p className="text-sm mt-2 text-gray-400">
+                                                            Password strength:{" "}
+                                                            <span className={
+                                                                passwordStrength < 3 ? 'text-red-500' :
+                                                                    passwordStrength < 4 ? 'text-yellow-500' :
+                                                                        'text-green-500'
+                                                            }>
+                                                                {passwordStrength < 3 ? 'Weak' :
+                                                                    passwordStrength < 4 ? 'Medium' : 'Strong'}
+                                                            </span>
                                                         </p>
                                                     )}
-
                                                     <FormMessage className="text-red-500" />
                                                 </FormItem>
                                             )}
@@ -271,9 +345,9 @@ export default function AuthPage() {
                                                     <FormControl>
                                                         <Input
                                                             type="password"
-                                                            placeholder="Confirm your password"
                                                             {...field}
-                                                            className="bg-[#1e1c29] border border-gray-700 text-white"
+                                                            placeholder="Confirm your password"
+                                                            className="bg-[#1e1c29] border-gray-700 text-white rounded-xl py-5 px-4 focus:ring-2 focus:ring-blue-500"
                                                         />
                                                     </FormControl>
                                                     <FormMessage className="text-red-500" />
@@ -285,26 +359,21 @@ export default function AuthPage() {
                                             control={registerForm.control}
                                             name="termsAccepted"
                                             render={({ field }) => (
-                                                <FormItem className="flex items-start space-x-2">
+                                                <FormItem className="flex items-start space-x-3">
                                                     <FormControl>
                                                         <Checkbox
                                                             checked={field.value}
                                                             onCheckedChange={field.onChange}
-                                                            className="accent-blue-500"
+                                                            className="accent-blue-500 border-gray-600 mt-1"
                                                         />
                                                     </FormControl>
                                                     <div className="space-y-1 leading-none">
-                                                        <FormLabel className="text-sm font-normal cursor-pointer text-gray-400">
+                                                        <FormLabel className="text-gray-400 cursor-pointer">
                                                             I agree to the{" "}
-                                                            <a href="#" className="text-blue-400 hover:underline">
-                                                                Terms of Service
-                                                            </a>{" "}
+                                                            <a href="#" className="text-blue-400 hover:underline">Terms of Service</a>{" "}
                                                             and{" "}
-                                                            <a href="#" className="text-blue-400 hover:underline">
-                                                                Privacy Policy
-                                                            </a>
+                                                            <a href="#" className="text-blue-400 hover:underline">Privacy Policy</a>
                                                         </FormLabel>
-                                                        <FormMessage className="text-red-500" />
                                                     </div>
                                                 </FormItem>
                                             )}
@@ -312,12 +381,12 @@ export default function AuthPage() {
 
                                         <Button
                                             type="submit"
-                                            className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold shadow-lg hover:bg-blue-600"
+                                            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white py-5 rounded-xl text-lg font-semibold transition-all"
                                             disabled={registerMutation.isPending}
                                         >
                                             {registerMutation.isPending ? (
                                                 <>
-                                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                                                     Creating account...
                                                 </>
                                             ) : (
@@ -330,63 +399,6 @@ export default function AuthPage() {
                         </Tabs>
                     </CardContent>
                 </Card>
-            </div>
-
-            {/* Right Panel - Showcase */}
-            <div className="w-full md:w-1/2 p-8 md:p-16 flex items-center justify-center bg-[#26223a] overflow-hidden">
-                <div className="w-full max-w-md bg-gradient-to-br from-orange-500 to-blue-700 p-1 rounded-2xl shadow-lg">
-                    <div className="bg-[#1e1c29] rounded-2xl p-6 w-full h-full">
-                        <div className="mb-8">
-                            <h2 className="text-2xl font-semibold mb-6 text-white">Your Skill Growth</h2>
-                            <div className="space-y-4">
-                                <div>
-                                    <div className="flex justify-between mb-1 text-gray-300">
-                                        <span>Java Programming</span>
-                                        <span>85%</span>
-                                    </div>
-                                    <div className="w-full bg-gray-800 rounded-full h-2">
-                                        <div className="bg-orange-500 rounded-full h-2 w-[85%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between mb-1 text-gray-300">
-                                        <span>DBMS</span>
-                                        <span>70%</span>
-                                    </div>
-                                    <div className="w-full bg-gray-800 rounded-full h-2">
-                                        <div className="bg-blue-500 rounded-full h-2 w-[70%]"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="flex justify-between mb-1 text-gray-300">
-                                        <span>Web Development</span>
-                                        <span>90%</span>
-                                    </div>
-                                    <div className="w-full bg-gray-800 rounded-full h-2">
-                                        <div className="bg-orange-500 rounded-full h-2 w-[90%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mb-8">
-                            <h2 className="text-2xl font-semibold mb-6 text-white">Semester Progress</h2>
-                            <div className="flex justify-between items-center text-white">
-                                <div className="w-16 h-16 rounded-full border-4 border-blue-500 flex items-center justify-center text-lg font-semibold">8.7</div>
-                                <div className="text-right">
-                                    <p className="text-lg font-medium">CGPA: 8.75</p>
-                                    <p className="text-gray-400">7 weeks remaining</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 className="text-2xl font-semibold mb-4 text-white">Overall Attendance</h2>
-                            <div className="flex items-center text-lg text-gray-300">
-                                <div className="w-4 h-4 rounded-full bg-green-500 mr-2"></div>
-                                <span>92% - Excellent</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );

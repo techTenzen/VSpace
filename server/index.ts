@@ -3,6 +3,7 @@ dotenv.config();
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import {detect} from "detect-port";
 
 
 const app = express();
@@ -62,11 +63,14 @@ app.use((req, res, next) => {
   // ALWAYS serve the app on port 3001
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
-  const port = 3001;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-  }, () => {
-    log(`serving on port ${port}`);
+  const basePort = 3001;
+  const port = await detect(basePort);
+
+  server.listen({ port, host: "0.0.0.0" }, () => {
+    const localUrl = `http://localhost:${port}`;
+    log(`✅ Server is running at: \x1b[36m${localUrl}\x1b[0m`);
+    if (port !== basePort) {
+      log(`⚠️ Port ${basePort} was busy. Switched to ${port}`);
+    }
   });
 })();

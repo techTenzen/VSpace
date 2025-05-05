@@ -5,8 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env DATABASE_URL=\"postgresql://neondb_owner:npg_aNnEVfw3M6gJ@ep-fancy-fog-a6crwjls.us-west-2.aws.neon.tech/neondb?sslmode=require\" tsx server/index.ts",
+    "chatbot": "cd server/chatbot && python api.py",
+    "start": "concurrently \"npm run dev\" \"npm run chatbot\"",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
     "db:push": "drizzle-kit push --force --config=./drizzle.config.ts",
     "db:seed": "tsx db/seed.ts"
@@ -53,6 +54,7 @@
     "cmdk": "^1.0.0",
     "connect-pg-simple": "^10.0.0",
     "date-fns": "^3.6.0",
+    "detect-port": "^2.1.0",
     "dotenv": "^16.5.0",
     "drizzle-orm": "^0.38.4",
     "drizzle-seed": "^0.3.1",
@@ -103,6 +105,7 @@
     "@types/ws": "^8.5.13",
     "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
     "drizzle-kit": "^0.27.1",
     "esbuild": "^0.24.0",
